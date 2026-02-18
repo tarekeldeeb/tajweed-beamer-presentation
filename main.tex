@@ -1,0 +1,349 @@
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+%--- Packages for Arabic and Layout ---%
+\usepackage{polyglossia}
+\setmainlanguage{arabic}
+\setotherlanguage{english}
+
+%--- Font Setup ---%
+\newfontfamily\arabicfont[Script=Arabic, Scale=1.2]{Amiri}
+\newfontfamily\quranfont[Script=Arabic, Scale=1.4]{Amiri}
+
+%--- Theme & Color Setup ---%
+\usetheme{Berlin}        
+\usecolortheme{seahorse} 
+\usefonttheme{serif}
+
+%--- VISUAL TWEAKS: Vertical Space Optimization ---%
+\setbeamertemplate{headline}{%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex]{section in head/foot}
+        \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}
+        \usebeamerfont{author in head/foot}\insertshortauthor \hfill \insertshortinstitute
+    \end{beamercolorbox}%
+}
+
+\setbeamertemplate{section in head/foot}{\insertsectionhead\hspace{20pt}}
+
+
+\setbeamertemplate{navigation symbols}{} 
+
+%--- Metadata ---%
+\title[أحكام التجويد]{ملخص أحكام تجويد القرآن الكريم}
+\subtitle{شرح شامل للمخارج، الصفات، والمدود}
+\author{دورة التجويد المكثفة المختصرة}
+\institute{مبادئ في علم التجويد}
+\date{\today}
+
+\begin{document}
+
+%--- Title Slide ---%
+\begin{frame}
+    \titlepage
+\end{frame}
+
+%--- Table of Contents (Right Aligned) ---%
+\begin{frame}{فهرس المحتويات}
+    \begin{columns}[t]
+        % العمود الأيمن (يظهر أولاً في العربية)
+        \column{0.45\textwidth}
+        \raggedright % <--- هذا الأمر يلغي التمدد ويضبط المحاذاة لليمين
+        \tableofcontents[sections={1-3}]
+        
+        % العمود الأيسر (يظهر ثانياً في العربية)
+        \column{0.45\textwidth}
+        \raggedright % <--- هذا الأمر يلغي التمدد ويضبط المحاذاة لليمين
+        \tableofcontents[sections={4-7}]
+    \end{columns}
+\end{frame}
+
+%===========================================================
+% Section 1: Introduction
+%===========================================================
+\section{المقدمة}
+\subsection{التعريف والحكم}
+
+\begin{frame}{تعريف التجويد وحكمه}
+    \begin{block}{تعريف التجويد}
+        \begin{itemize}
+            \item \textbf{لغة:} التحسين.
+            \item \textbf{اصطلاحاً:} إخراج كل حرف من مخرجه مع إعطائه حقه (الصفات الذاتية) ومستحقه (الصفات العرضية).
+        \end{itemize}
+    \end{block}
+
+    \begin{block}{حكم العمل به}
+        \begin{itemize}
+            \item \textbf{فرض عين:} فيما يغير المبنى أو يفسد المعنى (اللحن الجلي).
+            \item \textbf{فرض كفاية:} فيما يتعلق بمهارة تحقيق الصفات الدقيقة.
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\subsection{المراتب والاستعاذة}
+\begin{frame}{مراتب القراءة والاستعاذة}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \textbf{مراتب القراءة:}
+        \begin{enumerate}
+            \item \textbf{التحقيق:} القراءة باطمئنان وتؤدة (للتعليم).
+            \item \textbf{التدوير:} مرتبة متوسطة بين التحقيق والحدر.
+            \item \textbf{الحدر:} القراءة بسرعة مع مراعاة الأحكام.
+        \end{enumerate}
+
+        \column{0.5\textwidth}
+        \textbf{أوجه الاستعاذة والبسملة:}
+        \begin{itemize}
+            \item قطع الجميع.
+            \item وصل الجميع.
+            \item قطع الاستعاذة ووصل البسملة بأول السورة.
+            \item وصل الاستعاذة بالبسملة وقطعها عن أول السورة.
+        \end{itemize}
+    \end{columns}
+\end{frame}
+
+%===========================================================
+% Section 2: Noon Sakinah
+%===========================================================
+\section{النون الساكنة}
+\subsection{التعريف}
+
+\begin{frame}{تعريف النون الساكنة والتنوين}
+    \begin{itemize}
+        \item \textbf{النون الساكنة:} نون لا حركة لها، تثبت لفظاً وخطاً.
+        \item \textbf{التنوين:} نون ساكنة زائدة تلحق آخر الأسماء لفظاً لا خطاً.
+    \end{itemize}
+    \begin{alertblock}{الأحكام الأربعة}
+        للنون الساكنة والتنوين أربعة أحكام: الإظهار، الإدغام، الإقلاب، الإخفاء.
+    \end{alertblock}
+\end{frame}
+
+\subsection{الإظهار والإقلاب}
+\begin{frame}{1. الإظهار الحلقي و 2. الإقلاب}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \textbf{الإظهار الحلقي}
+        \begin{itemize}
+            \item \textbf{حروفه:} (ء، هـ، ع، ح، غ، خ).
+            \item مجموعة في: "أخي هاك علماً حازه غير خاسر".
+            \item \textbf{الحكم:} إخراج النون واضحة بغير غنة.
+        \end{itemize}
+
+        \column{0.5\textwidth}
+        \textbf{الإقلاب}
+        \begin{itemize}
+            \item \textbf{حروفه:} حرف الباء (ب).
+            \item \textbf{الحكم:} قلب النون ميماً مخفاة مع الغنة.
+            \item \textbf{مثال:} \quranfont{مِنْ بَعْدِ} تقرأ (ميم بعد).
+        \end{itemize}
+    \end{columns}
+\end{frame}
+
+\subsection{الإدغام والإخفاء}
+\begin{frame}{3. الإدغام}
+    \textbf{تعريفه:} إدخال حرف ساكن في متحرك بحيث يصيران حرفاً واحداً مشدداً.
+    \vspace{0.3cm}
+    \begin{table}
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{النوع} & \textbf{الحروف} & \textbf{المجموع} \\
+            \hline
+            إدغام بغنة & (ي، ن، م، و) & ينمو \\
+            \hline
+            إدغام بغير غنة & (ل، ر) & -- \\
+            \hline
+        \end{tabular}
+    \end{table}
+    \textbf{مجموع الحروف:} (يرملون).
+    \\ \small{* ملاحظة: الإدغام لا يكون إلا في كلمتين. إذا اجتمع في كلمة واحدة (مثل: صنوان) وجب الإظهار.}
+\end{frame}
+
+\begin{frame}{4. الإخفاء الحقيقي}
+    \begin{itemize}
+        \item \textbf{تعريفه:} النطق بالحرف بصفة بين الإظهار والإدغام مع بقاء الغنة.
+        \item \textbf{حروفه:} (15 حرفاً) وهي الباقية.
+        \item \textbf{مجموعة في أوائل البيت:}
+        \\ \quranfont{صِفْ ذَا ثَنَا كَمْ جَادَ شَخْصٌ قَدْ سَمَا ... دُمْ طَيِّباً زِدْ فِي تُقًى ضَعْ ظَالِماً}.
+    \end{itemize}
+\end{frame}
+
+%===========================================================
+% Section 3: Mim Sakinah (Split into 2 Columns)
+%===========================================================
+\section{الميم الساكنة}
+\subsection{أحكام الميم}
+
+\begin{frame}{أحكام الميم الساكنة}
+    للميم الساكنة ثلاثة أحكام:
+    \vspace{0.3cm}
+    \begin{columns}[t]
+        % Column 1: Rules 1 & 2
+        \column{0.5\textwidth}
+        \textbf{1. الإخفاء الشفوي:}
+        \begin{itemize}
+            \item حرفه: الباء (ب).
+            \item مثال: \quranfont{تَرْمِيهِم بِحِجَارَةٍ}.
+        \end{itemize}
+        \vspace{0.3cm}
+        \textbf{2. الإدغام الشفوي:}
+        \begin{itemize}
+            \item حرفه: الميم (م).
+            \item مثال: \quranfont{لَهُم مَّا يَشَاءُونَ}.
+        \end{itemize}
+
+        % Column 2: Rule 3
+        \column{0.5\textwidth}
+        \textbf{3. الإظهار الشفوي:}
+        \begin{itemize}
+            \item حروفه: باقي الحروف (26 حرفاً).
+            \item \textbf{تنبيه:} أحذر من الإخفاء عند (الواو) و(الفاء)؛ لقرب المخرج.
+        \end{itemize}
+    \end{columns}
+\end{frame}
+
+\subsection{المشددتان}
+\begin{frame}{أحكام النون والميم المشددتين}
+    \begin{block}{القاعدة}
+        يجب إظهار الغنة في النون والميم المشددتين بمقدار حركتين.
+    \end{block}
+    \textbf{أمثلة:}
+    \begin{itemize}
+        \item النون المشددة: \quranfont{إِنَّ}.
+        \item الميم المشددة: \quranfont{ثُمَّ}.
+    \end{itemize}
+\end{frame}
+
+%===========================================================
+% Section 4: Madd
+%===========================================================
+\section{المدود}
+\subsection{الأصلي والفرعي}
+
+\begin{frame}{تعريف المد وأقسامه}
+    \textbf{حروف المد:} الألف الساكنة المفتوح ما قبلها، الواو الساكنة المضموم ما قبلها، الياء الساكنة المكسور ما قبلها.
+
+    \begin{columns}
+        \column{0.5\textwidth}
+        \textbf{1. المد الأصلي (الطبيعي):}
+        ما لا تقوم ذات الحرف إلا به. مقداره حركتان.
+
+        \column{0.5\textwidth}
+        \textbf{2. المد الفرعي:}
+        ما زاد عن الطبيعي لسبب (همز أو سكون).
+    \end{columns}
+\end{frame}
+
+\begin{frame}{أنواع المد الفرعي (بسبب الهمز)}
+    \begin{enumerate}
+        \item \textbf{المد الواجب المتصل:} الهمزة بعد حرف المد في كلمة واحدة. (4-5 حركات).
+        \\ مثال: \quranfont{السَّمَاء}.
+        \item \textbf{المد الجائز المنفصل:} حرف المد في آخر كلمة والهمزة في أول التالية. (2، 4، 5 حركات).
+        \\ مثال: \quranfont{إِنَّا أَعْطَيْنَاكَ}.
+    \end{enumerate}
+\end{frame}
+
+\subsection{بسبب السكون}
+\begin{frame}{أنواع المد الفرعي (بسبب السكون)}
+    \begin{enumerate}
+        \item \textbf{المد العارض للسكون:} أن يأتي بعد حرف المد سكون عارض للوقف. (2، 4، 6 حركات).
+        \\ مثال: \quranfont{الْعَالَمِينَ} (عند الوقف).
+        \item \textbf{المد اللازم:} أن يأتي بعد حرف المد سكون أصلي وصلاً ووقفاً. (6 حركات لزوماً).
+        \begin{itemize}
+            \item \textbf{كلمي:} (مثقل: \quranfont{الضَّالِّينَ} / مخفف: \quranfont{آلْآنَ}).
+            \item \textbf{حرفي:} في فواتح السور (مجموعة في: كم عسل نقص).
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+%===========================================================
+% Section 5: Makharij & Sifat
+%===========================================================
+\section{المخارج والصفات}
+\subsection{المخارج}
+
+\begin{frame}{المخارج العامة للحروف}
+    % Placeholder for Diagram
+    
+    
+    \textbf{عدد المخارج:} 17 مخرجاً خاصاً موزعة على 5 مخارج عامة:
+    \begin{enumerate}
+        \item \textbf{الجوف:} خلاء الفم والحلق (حروف المد).
+        \item \textbf{الحلق:} (أقصى، وسط، أدنى) وتخرج منه حروف الإظهار.
+        \item \textbf{اللسان:} فيه 10 مخارج لـ 18 حرفاً.
+        \item \textbf{الشفتان:} (ف، م، ب، و).
+        \item \textbf{الخيشوم:} مخرج الغنة.
+    \end{enumerate}
+\end{frame}
+
+\subsection{الصفات}
+\begin{frame}{صفات الحروف (التي لها ضد)}
+    \begin{table}
+        \centering
+        \scriptsize
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{الصفة} & \textbf{ضدها} & \textbf{حروف الصفة الأولى} \\
+            \hline
+            الهمس & الجهر & فحثه شخص سكت \\
+            \hline
+            الشدة & الرخاوة & أجد قط بكت \\
+            \hline
+            الاستعلاء & الاستفال & خص ضغط قظ \\
+            \hline
+            الإطباق & الانفتاح & ص، ض، ط، ظ \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}{صفات الحروف (التي لا ضد لها)}
+    \begin{itemize}
+        \item \textbf{القلقلة:} اضطراب المخرج (قطب جد).
+        \item \textbf{الصفير:} (ص، ز، س).
+        \item \textbf{اللين:} (و، ي) الساكنتين المفتوح ما قبلهما.
+        \item \textbf{الانحراف:} (ل، ر).
+        \item \textbf{التكرير:} (ر).
+        \item \textbf{التفشي:} (ش).
+        \item \textbf{الاستطالة:} (ض).
+    \end{itemize}
+\end{frame}
+
+%===========================================================
+% Section 6: Miscellaneous
+%===========================================================
+\section{أحكام متفرقة}
+\subsection{التفخيم والراء}
+
+\begin{frame}{التفخيم والترقيق}
+    \begin{enumerate}
+        \item \textbf{مفخم دائماً:} حروف الاستعلاء (خص ضغط قظ).
+        \item \textbf{مرقق دائماً:} باقي الحروف.
+        \item \textbf{دائر بينهما:} الألف، لام لفظ الجلالة، الراء.
+    \end{enumerate}
+    \begin{block}{أحكام الراء}
+        \textbf{تفخم:} إذا كانت مفتوحة أو مضمومة. \\
+        \textbf{ترقق:} إذا كانت مكسورة.
+    \end{block}
+\end{frame}
+
+\subsection{الوقف}
+\begin{frame}{أقسام الوقف}
+    \begin{enumerate}
+        \item \textbf{التام:} تم معناه ولم يتعلق بما بعده.
+        \item \textbf{الكافي:} تعلق بما بعده معنى لا لفظاً.
+        \item \textbf{الحسن:} تعلق بما بعده لفظاً ومعنى.
+        \item \textbf{القبيح:} لم يتم معناه أو أوهم معنى فاسداً.
+    \end{enumerate}
+\end{frame}
+
+%--- End Slide ---%
+\begin{frame}
+    \centering
+    \Huge سبحانك اللهم وبحمدك، نشهد أن لا إله إلا أنت، نستغفرك ونتوب إليك.
+\end{frame}
+
+\end{document}
